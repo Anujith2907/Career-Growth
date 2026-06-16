@@ -3,6 +3,7 @@
 import { useState, useEffect, useRef, useCallback } from "react";
 import { useRouter } from "next/navigation";
 import { ShieldAlert, Key, Mail, ArrowLeft, Loader2, CheckCircle2, Send } from "lucide-react";
+import Logo from "@/components/Logo";
 
 type AuthStep = "email" | "otp";
 
@@ -167,13 +168,9 @@ export default function Login() {
 
         {/* Header */}
         <div className="flex flex-col items-center gap-2 text-center">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-tr from-indigo-600 to-cyan-500 flex items-center justify-center border border-indigo-400/40 shadow-lg shadow-indigo-500/20">
-            <svg className="w-6 h-6 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
-              <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" strokeLinecap="round" strokeLinejoin="round"/>
-            </svg>
-          </div>
+          <Logo size={48} />
           <h1 className="font-orbitron font-extrabold text-xl tracking-wider text-slate-100 mt-2">
-            NEXUS CAREER
+            CAREER GROWTH
           </h1>
           <p className="text-xs text-slate-400 font-semibold uppercase tracking-widest">
             {step === "email" ? "SECURE EMAIL VERIFICATION" : "ENTER VERIFICATION CODE"}

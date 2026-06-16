@@ -6,13 +6,14 @@ import { useRouter } from "next/navigation";
 import {
   Cpu, Code, Award, Search, FileText, CheckCircle, TrendingUp, Terminal,
   ArrowRight, Upload, AlertCircle, X, ChevronRight,
-  Download, Compass, BookOpen, RefreshCw, BarChart2, User, Briefcase,
+  Download, BookOpen, RefreshCw, BarChart2, User, Briefcase,
   GraduationCap, Star, Zap, Target, Brain, Layers, Clock,
   ChevronUp, ChevronDown, DollarSign
 } from "lucide-react";
 import ScoreGauge from "@/components/ScoreGauge";
 import SkillGalaxy, { ROLE_SKILLS_MAP, SkillNode } from "@/components/SkillGalaxy";
 import Roadmap3D from "@/components/Roadmap3D";
+import Logo from "@/components/Logo";
 
 // ─── Role salary data ───────────────────────────────────────────────────────
 const ROLE_SALARY_MAP: Record<string, { min: string; max: string }> = {
@@ -729,8 +730,8 @@ export default function Dashboard() {
 
       {/* Navigation */}
       <nav className="w-full max-w-7xl mx-auto px-6 py-4 flex justify-between items-center border-b border-slate-900 z-10 bg-slate-950/80 backdrop-blur-md sticky top-0">
-        <div className="flex items-center gap-3">
-          <Compass className="w-6 h-6 text-indigo-400" />
+        <div className="flex items-center gap-2.5">
+          <Logo size={28} />
           <span className="font-orbitron font-extrabold text-base tracking-wider text-slate-100">
             CAREER GROWTH PORTAL
           </span>
@@ -1654,7 +1655,7 @@ export default function Dashboard() {
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
               <div className="lg:col-span-7 flex flex-col gap-3">
                 <h2 className="text-base font-extrabold font-orbitron text-slate-300 flex items-center gap-2">
-                  <Compass className="w-4 h-4 text-indigo-400 animate-spin-slow" /> 3D Skill Galaxy
+                  <Layers className="w-4 h-4 text-indigo-400 animate-spin-slow" /> 3D Skill Galaxy
                 </h2>
                 <div className="flex-1 w-full aspect-video min-h-[380px]">
                   <SkillGalaxy selectedRole={targetRole} userSkills={formData.technicalSkills} onNodeSelect={node => setSelectedSkillNode(node)} />

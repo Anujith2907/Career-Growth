@@ -1,7 +1,8 @@
 export const unstable_instant = { prefetch: "static", unstable_disableValidation: true };
 
 import Link from "next/link";
-import { ArrowRight, Cpu, Code, Cloud, Shield, Database, Compass } from "lucide-react";
+import { ArrowRight, Cpu, Code, Cloud, Shield, Database } from "lucide-react";
+import Logo from "@/components/Logo";
 import ThreeCanvas from "@/components/ThreeCanvas";
 import CareerGlobe from "@/components/CareerGlobe";
 import ThemeToggle from "@/components/ThemeToggle";
@@ -17,10 +18,8 @@ export default function Home() {
 
       {/* Header Navigation */}
       <header className="w-full max-w-7xl mx-auto px-6 py-6 flex justify-between items-center z-10">
-        <div className="flex items-center gap-3">
-          <div className="w-9 h-9 rounded-lg bg-indigo-600 flex items-center justify-center border border-indigo-400/30 animate-pulse-glow">
-            <Compass className="w-5 h-5 text-cyan-400" />
-          </div>
+        <div className="flex items-center gap-2.5">
+          <Logo size={36} />
           <span className="font-orbitron font-extrabold text-lg tracking-widest bg-gradient-to-r from-slate-100 to-indigo-400 bg-clip-text text-transparent">
             CAREER GROWTH
           </span>
