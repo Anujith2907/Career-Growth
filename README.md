@@ -1,4 +1,5 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Career-Growth
+Career Growth is an AI-powered placement prediction platform that analyzes academic performance, coding skills, aptitude and communication abilities to predict placement chances, recommend suitable career paths, and identify skill gaps for improvement.
 
 ## Getting Started
 
