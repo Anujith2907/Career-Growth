@@ -1,0 +1,53 @@
+{
+  "ML Engineer": {
+    "requiredSkills": [
+      {"skill": "Python", "level": "Advanced"},
+      {"skill": "TensorFlow", "level": "Intermediate"},
+      {"skill": "PyTorch", "level": "Intermediate"},
+      {"skill": "Data Preprocessing", "level": "Advanced"},
+      {"skill": "SQL", "level": "Intermediate"},
+      {"skill": "Docker", "level": "Beginner"},
+      {"skill": "Git", "level": "Beginner"}
+    ]
+  },
+  "Data Scientist": {
+    "requiredSkills": [
+      {"skill": "Python", "level": "Advanced"},
+      {"skill": "R", "level": "Intermediate"},
+      {"skill": "Statistics", "level": "Advanced"},
+      {"skill": "Machine Learning", "level": "Advanced"},
+      {"skill": "SQL", "level": "Intermediate"},
+      {"skill": "Data Visualization", "level": "Intermediate"}
+    ]
+  },
+  "AI Engineer": {
+    "requiredSkills": [
+      {"skill": "Python", "level": "Advanced"},
+      {"skill": "Deep Learning", "level": "Advanced"},
+      {"skill": "TensorFlow", "level": "Intermediate"},
+      {"skill": "PyTorch", "level": "Intermediate"},
+      {"skill": "Kubernetes", "level": "Beginner"}
+    ]
+  },
+  "Web Developer": {
+    "requiredSkills": [
+      {"skill": "HTML", "level": "Advanced"},
+      {"skill": "CSS", "level": "Advanced"},
+      {"skill": "JavaScript", "level": "Advanced"},
+      {"skill": "React", "level": "Intermediate"},
+      {"skill": "Node.js", "level": "Intermediate"},
+      {"skill": "Git", "level": "Beginner"}
+    ]
+  },
+  "Full Stack Developer": {
+    "requiredSkills": [
+      {"skill": "HTML", "level": "Advanced"},
+      {"skill": "CSS", "level": "Advanced"},
+      {"skill": "JavaScript", "level": "Advanced"},
+      {"skill": "React", "level": "Intermediate"},
+      {"skill": "Node.js", "level": "Intermediate"},
+      {"skill": "SQL", "level": "Intermediate"},
+      {"skill": "Docker", "level": "Beginner"}
+    ]
+  }
+}
