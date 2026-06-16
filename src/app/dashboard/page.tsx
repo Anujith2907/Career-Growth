@@ -872,6 +872,50 @@ export default function Dashboard() {
                 </div>
               </div>
 
+              <div className="border-t border-slate-900 pt-3">
+                <h3 className="text-base font-bold font-orbitron tracking-wider text-slate-300 mb-3 uppercase flex items-center gap-1.5">
+                  <Brain className="w-4 h-4 text-purple-400" /> Soft Skills
+                </h3>
+                <div className="grid grid-cols-2 gap-4">
+                  <div>
+                    <label className="text-sm uppercase font-bold text-slate-400 block mb-1">
+                      Communication Score
+                    </label>
+                    <div className="flex items-center gap-3">
+                      <input type="range" min="1" max="10" value={formData.communicationScore}
+                        onChange={e => setFormData({ ...formData, communicationScore: Number(e.target.value) })}
+                        className="flex-1 h-2 bg-slate-800 rounded-full appearance-none cursor-pointer"
+                        style={{ accentColor: '#a855f7' }} />
+                      <span className="text-lg font-extrabold font-orbitron text-purple-400 min-w-[2.5rem] text-center tabular-nums">
+                        {formData.communicationScore}
+                      </span>
+                    </div>
+                    <div className="flex justify-between text-[10px] text-slate-600 mt-0.5 px-0.5">
+                      <span>Poor</span>
+                      <span>Excellent</span>
+                    </div>
+                  </div>
+                  <div>
+                    <label className="text-sm uppercase font-bold text-slate-400 block mb-1">
+                      Aptitude Score
+                    </label>
+                    <div className="flex items-center gap-3">
+                      <input type="range" min="1" max="10" value={formData.aptitudeScore}
+                        onChange={e => setFormData({ ...formData, aptitudeScore: Number(e.target.value) })}
+                        className="flex-1 h-2 bg-slate-800 rounded-full appearance-none cursor-pointer"
+                        style={{ accentColor: '#6366f1' }} />
+                      <span className="text-lg font-extrabold font-orbitron text-indigo-400 min-w-[2.5rem] text-center tabular-nums">
+                        {formData.aptitudeScore}
+                      </span>
+                    </div>
+                    <div className="flex justify-between text-[10px] text-slate-600 mt-0.5 px-0.5">
+                      <span>Poor</span>
+                      <span>Excellent</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
               <div>
                 <label className="text-sm uppercase font-bold text-slate-400 block mb-1">Technical Skills (Press Enter)</label>
                 <input type="text" value={skillInput}
