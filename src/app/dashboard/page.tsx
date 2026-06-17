@@ -2,7 +2,6 @@
 
 import { useState, useEffect, useRef, useCallback } from "react";
 import Link from "next/link";
-import { useRouter } from "next/navigation";
 import {
   Cpu, Code, Award, Search, FileText, CheckCircle, TrendingUp, Terminal,
   ArrowRight, Upload, AlertCircle, X, ChevronRight,
@@ -231,18 +230,7 @@ function SkillBarChart({
 
 // ─── Main Dashboard ───────────────────────────────────────────────────────────
 export default function Dashboard() {
-  const router = useRouter();
-  const [authChecked, setAuthChecked] = useState(false);
   const [activeTab, setActiveTab] = useState<"predictor" | "resume" | "jobs" | "galaxy" | "report">("predictor");
-
-  useEffect(() => {
-    const token = localStorage.getItem("nexus_auth_token");
-    if (!token) {
-      router.push("/login");
-    } else {
-      setAuthChecked(true);
-    }
-  }, [router]);
 
   // ── Predictor states ────────────────────────────────────────────────────────
   const [formData, setFormData] = useState({
@@ -709,13 +697,7 @@ export default function Dashboard() {
 
   const handleDownloadReport = () => window.print();
 
-  if (!authChecked) {
-    return (
-      <div className="min-h-screen bg-slate-950 flex items-center justify-center">
-        <RefreshCw className="w-8 h-8 text-indigo-400 animate-spin" />
-      </div>
-    );
-  }
+
 
   const { score: readinessScore, owned: ownedSkills, missing: missingSkills } = getRoleReadiness();
   const reqSkills = ROLE_SKILLS_MAP[targetRole] || ROLE_SKILLS_MAP["web-developer"];
@@ -766,10 +748,9 @@ export default function Dashboard() {
 
         <Link
           href="/"
-          onClick={() => localStorage.removeItem("nexus_auth_token")}
           className="text-sm font-bold font-orbitron text-slate-400 hover:text-slate-100 border border-slate-900 px-4 py-2.5 rounded-lg hover:bg-slate-900/30 transition-all"
         >
-          LOG OUT
+          HOME
         </Link>
       </nav>
 
